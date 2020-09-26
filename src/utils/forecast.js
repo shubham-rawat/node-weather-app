@@ -12,7 +12,7 @@ const forecast = (latitude, longitude, callback) => {
             callback(body.error.type, undefined)
         }
         else{
-            callback(undefined,body.current.weather_descriptions[0]+". It is currently "+body.current.temperature+" C but feels like " + body.current.feelslike +" C")
+            callback(undefined,body.current.weather_descriptions[0]+". It is currently "+body.current.temperature+" C but feels like " + body.current.feelslike +" C. The humidity is "+ body.current.humidity+".")
         }
     })
 
